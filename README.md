@@ -1,2 +1,4 @@
 # elk-nginx-docker
-Setup de uma stack com Nginx enviando dados de logs para ELK. Tudo via Docker.
+Run a Nginx reverse proxy integrated with ELK stack all running with Docker and Docker Compose. 
+
+It allows you to analyse any log data sent by nginx using the visualization tools of Kibana.
