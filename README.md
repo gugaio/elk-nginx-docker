@@ -17,3 +17,5 @@ The key points of Elastic Search configuration here are:
 - "ports" maps port 9200 (API Elastic default port). Also maps 9300 but it is only used for clusterization.
 - "enviroments/ES_JAVA_OPTS" contains JVM flags to incresate memory size.
 - "network" indicates the private network which all components to comunicate each other.
+
+![alt text](./images/elastic_ymal.png)
