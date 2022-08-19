@@ -9,4 +9,4 @@ The diagram below shows all components in this example.
 - Nginx will send logs to logstabh by udp at port 1025.
 
 ## Elastic Search
-![alt text](./images/elastic.png)
+![alt text](./images/elasticsearch.png)
