@@ -6,5 +6,7 @@ It allows you to analyse any log data sent by nginx to Elastic Search using the 
 
 The diagram below shows all components in this example. Next, we will detail all of them.
 ![alt text](./images/diagram.png)
+- User admin can access kibana by port locahost:8020. Nginx will redirect from 9020 to kibana port 5601.
+- Nginx will send logs to logstabh by udp at port 1025.
 
 ## Elastic Search
