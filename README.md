@@ -1,6 +1,8 @@
 # elk-nginx-docker
-Run a Nginx reverse proxy integrated with ELK stack all running with Docker and Docker Compose. 
+Run a Nginx reverse proxy integrated with ELK stack all running with Docker and Docker Compose.
+
 It allows you to analyse any log data sent by nginx to Elastic Search using the visualization tools of Kibana.
+
 You can check all components in this example at diagram below.
 ![alt text](./images/diagram.png)
 - User admin can access kibana by port locahost:8020. Nginx will redirect from 9020 to kibana port 5601.
