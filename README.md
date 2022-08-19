@@ -1,9 +1,10 @@
-# elk-nginx-docker
-Run a Nginx reverse proxy integrated with ELK stack all running with Docker and Docker Compose.
-
+# Monitoring Nginx logs with ELK stack. All running at Docker.
+This small project contains all you need to run a **docker compose up** and have a Nginx ready monitored by a ELK stack. 
 It allows you to analyse any log data sent by nginx to Elastic Search using the visualization tools of Kibana.
+You dont need read anything to run the project, only **docker compose up** is enough. 
+But here I'll show you the key points of solution if you need understand each item.
 
-You can check all components in this example at diagram below.
+Below you see the project diagram.
 ![alt text](./images/diagram.png)
 - User admin can access kibana by port locahost:8020. Nginx will redirect from 9020 to kibana port 5601.
 - Nginx will send logs to logstabh by udp at port 1025.
