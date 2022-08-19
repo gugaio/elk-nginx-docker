@@ -9,7 +9,7 @@ You can check all components in this example at diagram below.
 - Nginx will send logs to logstabh by udp at port 1025.
 
 ## Elastic Search
-![alt text](./images/elastic_search.png)
+![alt text](./images/docker_elastic.png)
 
 The key points of Elastic Search configuration here are:
 - "build/context" set the Elastic Dockerfile directory path.
