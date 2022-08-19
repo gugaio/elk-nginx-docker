@@ -13,8 +13,8 @@ The diagram below shows all components in this example.
 ![alt text](./images/elastic_search.png)
 
 The key points of Elastic Search configuration here are:
-- "build/context" set the Elastic Dockerfile path.
-- "volumes" map the elastic.yml (to configure Elastic Search) and an writable directory to Elastic. 
-- "ports" map the port 9200 (API Elastic default port). Also maps 9300 but it is only used by clusters.
+- "build/context" set the Elastic Dockerfile directory path.
+- "volumes" maps the elastic.yml (to configure Elastic Search) and an writable directory to "data". 
+- "ports" maps port 9200 (API Elastic default port). Also maps 9300 but it is only used for clusterization.
 - "enviroments/ES_JAVA_OPTS" contains JVM flags to incresate memory size.
-- "network" indicate the private network where all components will to comunicate each other.
+- "network" indicates the private network which all components to comunicate each other.
