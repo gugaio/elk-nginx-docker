@@ -27,6 +27,12 @@ FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0
 ```
 
 ### *./elasticsearch/config/elasticsearch.yml*
+```dockerfile
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
+discovery.zen.minimum_master_nodes: 1
+discovery.type: single-node
+```
 ![alt text](./images/elastic_ymal.png)
 - ***cluster.name:*** define a name for the cluster. Its not important to a development enviroment.
 - ***network.host:*** set witch network interface that elasticsearch will bind to. Set 0.0.0.0 to bind any one. 
