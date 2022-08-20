@@ -19,7 +19,14 @@ Shortly explanation:
 - 4. Docker Compose
 
 ## Elastic Search
-``` blah blah blah``` 
+The **elasticsearch**directory contains the follow files:
+
+### *./elasticsearch/config/elasticsearch.yml*
+![alt text](./images/elastic_ymal.png)
+- cluster.name define a name for the cluster. Its not important to a development enviroment.
+- network.host set witch network interface that elasticsearch will bind to. Set 0.0.0.0 to bind any one. 
+- discovery.type set single-node because we dont need a cluster at an dev enviroment.
+
 
 ![alt text](./images/docker_elastic.png)
 
@@ -30,4 +37,4 @@ The key points of Elastic Search configuration here are:
 - "enviroments/ES_JAVA_OPTS" contains JVM flags to incresate memory size.
 - "network" indicates the private network which all components to comunicate each other.
 
-![alt text](./images/elastic_ymal.png)
+
