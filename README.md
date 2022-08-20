@@ -23,9 +23,11 @@ The **./elasticsearch/** directory contains the follow files:
 ### *./elasticsearch/Dockerfile*
 This file only specify a Docker image to build the container.
 ```dockerfile
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0
+```
+
+```yaml
+FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0
 ```
 
 
