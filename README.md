@@ -19,13 +19,13 @@ Shortly explanation:
 - 4. Docker Compose
 
 ## Elastic Search
-The **elasticsearch**directory contains the follow files:
+The **elasticsearch** directory contains the follow files:
 
 ### *./elasticsearch/config/elasticsearch.yml*
 ![alt text](./images/elastic_ymal.png)
-- cluster.name define a name for the cluster. Its not important to a development enviroment.
-- network.host set witch network interface that elasticsearch will bind to. Set 0.0.0.0 to bind any one. 
-- discovery.type set single-node because we dont need a cluster at an dev enviroment.
+- ***cluster.name:*** define a name for the cluster. Its not important to a development enviroment.
+- ***network.host:*** set witch network interface that elasticsearch will bind to. Set 0.0.0.0 to bind any one. 
+- ***discovery.type:*** set single-node because we dont need a cluster at an dev enviroment.
 
 
 ![alt text](./images/docker_elastic.png)
