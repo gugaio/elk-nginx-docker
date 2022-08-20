@@ -19,13 +19,12 @@ Shortly explanation:
 - 4. Docker Compose
 
 ## Elastic Search
-The **./elasticsearch/** directory contains the follow files:
+The *./elasticsearch/* directory contains the follow files:
 ### *./elasticsearch/Dockerfile*
 This file only specify a Docker image to build the container.
 ```dockerfile
 FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0
 ```
-
 
 ### *./elasticsearch/config/elasticsearch.yml*
 ```dockerfile
@@ -39,6 +38,28 @@ network.host: 0.0.0.0
 discovery.zen.minimum_master_nodes: 1
 discovery.type: single-node
 ```
+
+
+## Logstach
+The *./logstash/* directory contains the follow files:
+### *./logstash/Dockerfile*
+This file only specify a Docker image to build the container.
+```dockerfile
+FROM docker.elastic.co/logstash/logstash-oss:6.6.0
+```
+
+### *./logstash/config/logstash.yml*
+```yaml
+#The bind address for the HTTP API endpoint.
+http.host: "0.0.0.0"
+#Path to Logstash main pipeline conf
+path.config: /usr/share/logstash/pipeline
+```
+
+### *./logstash/pipeline/logstash.config*
+This file specify the input port to receive Nginx log messages, all the filter to transform the raw log message, and the output destination (elastic search url). Details you can see inside the file.
+
+
 
 
 ![alt text](./images/docker_elastic.png)
