@@ -19,6 +19,8 @@ Shortly explanation:
 - 4. Docker Compose
 
 ## Elastic Search
+``` blah blah blah``` 
+
 ![alt text](./images/docker_elastic.png)
 
 The key points of Elastic Search configuration here are:
