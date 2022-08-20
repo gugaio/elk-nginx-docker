@@ -10,6 +10,12 @@ Below you see the project diagram.
 - Nginx will send logs to logstabh by udp at port 1025.
 - Logstach will transform and send the logs to Elastic Search at API port 9200. Kibana also will call Elastic Search at port 9200 to get data.
 
+## This README will follow these steps:
+- Elastic Search configuration YAML and Dockerfile
+- Logstah configuration YAML and Dockerfile
+- Kibana configuration YAML and Dockerfile
+- Docker Compose
+
 ## Elastic Search
 ![alt text](./images/docker_elastic.png)
 
