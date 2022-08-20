@@ -26,6 +26,7 @@ This file only specify a Docker image to build the container.
 FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.6.0
 ```
 
+
 ### *./elasticsearch/config/elasticsearch.yml*
 ```dockerfile
 #Define a name for the cluster. Its not important to a development enviroment.
