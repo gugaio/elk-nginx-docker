@@ -20,6 +20,9 @@ Shortly explanation:
 
 ## Elastic Search
 The **elasticsearch** directory contains the follow files:
+### *./elasticsearch/Dockerfile*
+This file only specify a Docker image to build the container.
+
 
 ### *./elasticsearch/config/elasticsearch.yml*
 ![alt text](./images/elastic_ymal.png)
