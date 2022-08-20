@@ -19,7 +19,7 @@ Shortly explanation:
 - 4. Docker Compose
 
 ## Elastic Search
-The **elasticsearch** directory contains the follow files:
+The **./elasticsearch/** directory contains the follow files:
 ### *./elasticsearch/Dockerfile*
 This file only specify a Docker image to build the container.
 
