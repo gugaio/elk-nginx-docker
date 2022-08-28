@@ -114,6 +114,20 @@ access_log syslog:server=logstash:1025 custom;
 error_log /var/log/nginx/error.log;
 ```
 
+### *./nginx/reverse-proxy.config*
+```yaml
+server {
+    listen 8020; #listem from 8020
+    server_name elk;
+
+    location / {
+    	proxy_pass http://kibana:5601; #and redirect to kibana:5601
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+```
+
 ![alt text](./images/docker_elastic.png)
 
 The key points of Elastic Search configuration here are:
