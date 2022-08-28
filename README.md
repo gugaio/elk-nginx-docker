@@ -1,4 +1,4 @@
-# Nginx monitored by ELK stack.
+# Nginx monitored by ELK stack. (All running as Docker containers)
 
 ## TL;DR;
 ```bash
