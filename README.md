@@ -84,7 +84,7 @@ elasticsearch.url: http://elasticsearch:9200
 ```
 
 ## 4. Nginx
-### *./kibana/Dockerfile*
+### *./nginx/Dockerfile*
 Nginx Dockerfile copy two config files.
 * nginx.conf: where I configure to send access log data to logstash.
 * reverse-proxy.conf: where I configure nginx as a reverse proxy forwarding requests from 8020 port to kibana address.
@@ -98,13 +98,20 @@ STOPSIGNAL SIGTERM
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-### *./kibana/config/kibana.yml*
+### *./nginx/nginx.config*
+Main section of this file is where I define the access log format and how to send to logstash.
+Below a highlight it.
 ```yaml
-## Default Kibana configuration from kibana-docker.
-server.name: kibana
-server.host: "0"
-# Elastic Search API port
-elasticsearch.url: http://elasticsearch:9200
+#################
+#### Here is where we define the Log format and how to send to LogStach
+#################
+log_format custom '$remote_addr - $remote_user [$time_local]'
+              '"$request" $status $body_bytes_sent'
+              '"$http_referer" "$http_user_agent"'
+              '"$request_time" "$upstream_connect_time"';
+access_log /var/log/nginx/access.log custom;
+access_log syslog:server=logstash:1025 custom;
+error_log /var/log/nginx/error.log;
 ```
 
 ![alt text](./images/docker_elastic.png)
