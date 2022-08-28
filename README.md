@@ -1,10 +1,22 @@
-# Nginx monitored by ELK stack. All running as Docker containers.
+# Nginx monitored by ELK stack.
+
+## TL;DR;
+```bash
+git clone https://github.com/gugaio/elk-nginx-docker.git
+cd elk-nginx-docker
+docker-compose up
+//Kibana will be available at http://localhost:8020
+./create-nginx-index-at-kibana.sh
+```dockerfile
+
+
+# Intro
 This small project contains all you need to run a **docker compose up** command and have a Nginx ready monitored by a ELK stack. 
 It allows you to analyse any log data sent by nginx to Elastic Search using the visualization tools of Kibana.
 You DONT need this README to run the project, only **docker compose up** is enough. 
 But here I'll show you the key points of solution if you need understand each item.
 
-Below you see the project diagram.
+# Diagram
 ![alt text](./images/diagram.png)
 Shortly explanation:
 - User access kibana by http://localhost:8020. NGINX will redirect it from 9020 to kibana default port 5601.
