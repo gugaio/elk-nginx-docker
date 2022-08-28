@@ -121,7 +121,7 @@ server {
     server_name elk;
 
     location / {
-    	proxy_pass http://kibana:5601; #and redirect to kibana:5601
+        proxy_pass http://kibana:5601; #and redirect to kibana:5601
         proxy_set_header Host $host;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
