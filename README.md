@@ -69,7 +69,11 @@ path.config: /usr/share/logstash/pipeline
 This file specify the input port to receive Nginx log messages, all the filter to transform the raw log message, and the output destination (elastic search url). Details you can see inside the file.
 
 ## 3. Kibana
-Kibana directory has a similiar Dockerfile as showed at Elastc and Logstash topics. We also have a YAML where we configure the elastic search url.
+### *./kibana/Dockerfile*
+This file only specify a Docker image to build the container.
+```dockerfile
+FROM docker.elastic.co/kibana/kibana-oss:6.6.0
+```
 ### *./kibana/config/kibana.yml*
 ```yaml
 ## Default Kibana configuration from kibana-docker.
