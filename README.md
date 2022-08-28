@@ -19,7 +19,7 @@ But here I'll show you the key points of solution if you need understand each it
 # Diagram
 ![alt text](./images/diagram.png)
 
-# Follow I will describe a shortly explanation about each item of project:
+# Follow I will provide a shortly explanation about each component of project:
 
 - 1. Elastic Search
 - 2. Logstah
@@ -83,6 +83,29 @@ server.host: "0"
 elasticsearch.url: http://elasticsearch:9200
 ```
 
+## 4. Nginx
+### *./kibana/Dockerfile*
+Nginx Dockerfile copy two config files.
+* nginx.conf: where I configure to send access log data to logstash.
+* reverse-proxy.conf: where I configure nginx as a reverse proxy forwarding requests from 8020 port to kibana address.
+```dockerfile
+FROM nginx:latest
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY reverse-proxy.conf /etc/nginx/conf.d/reverse-proxy.conf
+EXPOSE 8020
+EXPOSE 80
+STOPSIGNAL SIGTERM
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+### *./kibana/config/kibana.yml*
+```yaml
+## Default Kibana configuration from kibana-docker.
+server.name: kibana
+server.host: "0"
+# Elastic Search API port
+elasticsearch.url: http://elasticsearch:9200
+```
 
 ![alt text](./images/docker_elastic.png)
 
