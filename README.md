@@ -7,7 +7,7 @@ cd elk-nginx-docker
 docker-compose up
 //Kibana will be available at http://localhost:8020
 ./create-nginx-index-at-kibana.sh
-```dockerfile
+```
 
 
 # Intro
