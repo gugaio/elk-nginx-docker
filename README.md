@@ -18,19 +18,16 @@ But here I'll show you the key points of solution if you need understand each it
 
 # Diagram
 ![alt text](./images/diagram.png)
-Shortly explanation:
-- User access kibana by http://localhost:8020. NGINX will redirect it from 9020 to kibana default port 5601.
-- Nginx will send logs to logstabh by udp at port 1025.
-- Logstach will transform and send the logs to Elastic Search at API port 9200. Kibana also will call Elastic Search at port 9200 to get data.
 
-## This README will follow these steps:
-- 1. Elastic Search configuration YAML and Dockerfile
-- 2. Logstah configuration YAML and Dockerfile
-- 3. Kibana configuration YAML and Dockerfile
-- 4. Nginx configuration files and Dockerfile
-- 4. Docker Compose
+# Follow I will describe a shortly explanation about each item of project:
 
-## Elastic Search
+- 1. Elastic Search
+- 2. Logstah
+- 3. Kibana
+- 4. Nginx
+- 5. Docker
+
+## 1. Elastic Search
 The *./elasticsearch/* directory contains the follow files:
 ### *./elasticsearch/Dockerfile*
 This file only specify a Docker image to build the container.
