@@ -11,8 +11,8 @@ docker-compose up
 
 
 # Intro
-This small project contains all you need to run a **docker compose up** command and have a Nginx ready monitored by a ELK stack. 
-It allows you to analyse any log data sent by nginx to Elastic Search using the visualization tools of Kibana.
+This small project contains all you need to execute a **docker compose up** command and get a Nginx up, running and monitored by a ELK stack. 
+It allows you to analyse any log data sent by nginx using Kibana.
 You DONT need this README to run the project, only **docker compose up** is enough. 
 But here I'll show you the key points of solution if you need understand each item.
 
